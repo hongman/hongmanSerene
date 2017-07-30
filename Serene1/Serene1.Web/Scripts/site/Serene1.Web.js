@@ -1897,55 +1897,6 @@ var Serene1;
 (function (Serene1) {
     var Organization;
     (function (Organization) {
-        var BusinessUnitsForm = (function (_super) {
-            __extends(BusinessUnitsForm, _super);
-            function BusinessUnitsForm() {
-                return _super !== null && _super.apply(this, arguments) || this;
-            }
-            return BusinessUnitsForm;
-        }(Serenity.PrefixedContext));
-        BusinessUnitsForm.formKey = 'Organization.BusinessUnits';
-        Organization.BusinessUnitsForm = BusinessUnitsForm;
-        [['Name', function () { return Serenity.StringEditor; }], ['ParentUnitId', function () { return Serenity.IntegerEditor; }]].forEach(function (x) { return Object.defineProperty(BusinessUnitsForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
-    })(Organization = Serene1.Organization || (Serene1.Organization = {}));
-})(Serene1 || (Serene1 = {}));
-var Serene1;
-(function (Serene1) {
-    var Organization;
-    (function (Organization) {
-        var BusinessUnitsRow;
-        (function (BusinessUnitsRow) {
-            BusinessUnitsRow.idProperty = 'UnitId';
-            BusinessUnitsRow.nameProperty = 'Name';
-            BusinessUnitsRow.localTextPrefix = 'Organization.BusinessUnits';
-            var Fields;
-            (function (Fields) {
-            })(Fields = BusinessUnitsRow.Fields || (BusinessUnitsRow.Fields = {}));
-            ['UnitId', 'Name', 'ParentUnitId', 'ParentUnitName', 'ParentUnitParentUnitId'].forEach(function (x) { return Fields[x] = x; });
-        })(BusinessUnitsRow = Organization.BusinessUnitsRow || (Organization.BusinessUnitsRow = {}));
-    })(Organization = Serene1.Organization || (Serene1.Organization = {}));
-})(Serene1 || (Serene1 = {}));
-var Serene1;
-(function (Serene1) {
-    var Organization;
-    (function (Organization) {
-        var BusinessUnitsService;
-        (function (BusinessUnitsService) {
-            BusinessUnitsService.baseUrl = 'Organization/BusinessUnits';
-            var Methods;
-            (function (Methods) {
-            })(Methods = BusinessUnitsService.Methods || (BusinessUnitsService.Methods = {}));
-            ['Create', 'Update', 'Delete', 'Retrieve', 'List'].forEach(function (x) {
-                BusinessUnitsService[x] = function (r, s, o) { return Q.serviceRequest(BusinessUnitsService.baseUrl + '/' + x, r, s, o); };
-                Methods[x] = BusinessUnitsService.baseUrl + '/' + x;
-            });
-        })(BusinessUnitsService = Organization.BusinessUnitsService || (Organization.BusinessUnitsService = {}));
-    })(Organization = Serene1.Organization || (Serene1.Organization = {}));
-})(Serene1 || (Serene1 = {}));
-var Serene1;
-(function (Serene1) {
-    var Organization;
-    (function (Organization) {
         var ContactForm = (function (_super) {
             __extends(ContactForm, _super);
             function ContactForm() {

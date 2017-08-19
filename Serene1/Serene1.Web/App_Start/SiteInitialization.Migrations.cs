@@ -152,12 +152,14 @@
 
             // safety check to ensure that we are not modifying an arbitrary database.
             // remove these lines if you want Serene1 migrations to run on your DB.
-            if (!isOracle && cs.ConnectionString.IndexOf(typeof(SiteInitialization).Namespace +
+
+            //무결성 체크 해제, 7/30/2017
+            /*if (!isOracle && cs.ConnectionString.IndexOf(typeof(SiteInitialization).Namespace +
                     @"_" + databaseKey + "_v1", StringComparison.OrdinalIgnoreCase) < 0)
             {
                 SkippedMigrations = true;
                 return;
-            }
+            }*/
 
             string databaseType = isOracle ? "OracleManaged" : serverType;
             var connectionString = cs.ConnectionString;
